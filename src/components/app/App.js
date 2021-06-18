@@ -63,7 +63,7 @@ class App extends Component {
         <ImageGallery gallery={gallery} />
         {isLoading && <Loader />}
         {searchQuery && (
-          <Button onClick={this.fetchImg}>
+          <Button onClick={this.fetchImg} BtnName='Load more'>
             <Loader />
           </Button>
         )}

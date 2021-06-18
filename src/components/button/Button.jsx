@@ -2,11 +2,11 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-const Button = ({ onClick, children }) => {
+const Button = ({ BtnName, onClick, children }) => {
   return (
     <div className='BtnContainer'>
     <button type="button" className="Button" onClick={onClick}>
-      Load more
+      {BtnName}
       {children}
     </button>
     </div>
@@ -14,6 +14,7 @@ const Button = ({ onClick, children }) => {
 };
 
 Button.propTypes = {
+  BtnName: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
